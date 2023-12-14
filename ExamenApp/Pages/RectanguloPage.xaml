@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:examenapp="clr-namespace:ExamenApp"
+             x:DataType="examenapp:RectanguloViewModel"
+             mc:Ignorable="d"
+             x:Class="ExamenApp.Pages.RectanguloPage">
+    <VerticalStackLayout>
+
+        <Entry
+            Placeholder="Longitud" Keyboard="Numeric" Text="{Binding Length}" />
+
+        <Entry
+            Placeholder="Ancho" Keyboard="Numeric" Text="{Binding Width}" />
+
+        <Button
+            Text="Calcular Área" Command="{Binding CalculateCommand}" />
+
+        <Label
+            Text="Área del Rectángulo: {Binding Area}" />
+
+         <Label
+            Text="{Binding Area}" FontSize="20" FontAttributes="Bold" />
+
+        <Button
+            Text="Limpiar" Command="{Binding ClearCommand}" />
+
+         <Button
+            Text="Limpiar Todos" Command="{Binding ClearAllCommand}" />
+
+    </VerticalStackLayout>
+</ContentView>
+
